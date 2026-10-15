@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hundir la Flota · Descargar</title>
+<meta name="description" content="Batalla naval en 3D para Windows: contra la máquina, a 2 jugadores y online.">
+<link rel="icon" href="icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Big+Shoulders+Display:wght@800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --abyss: #07131f; --hull: #0f2133; --deck: #18324a; --grid: #2f5373;
+    --foam: #e8f1f7; --mist: #8fa9bf; --sonar: #2ec4b6;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--abyss); color: var(--foam); font: 17px/1.55 "Barlow", system-ui, sans-serif; }
+  main { max-width: 640px; margin: 0 auto; padding: 40px 16px 64px; }
+  header { display: flex; gap: 20px; align-items: center; }
+  header img { width: 80px; height: 80px; border-radius: 18px; }
+  h1 { font: 800 clamp(44px, 10vw, 72px)/0.95 "Big Shoulders Display", "Arial Narrow", sans-serif; margin: 0; }
+  .tag { color: var(--mist); margin: 6px 0 0; }
+  .card { margin-top: 36px; background: var(--hull); border: 2px solid var(--grid); border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 12px; }
+  .card h2 { margin: 0; font-size: 22px; }
+  .card p { margin: 0; color: var(--mist); }
+  .btn { display: block; text-align: center; background: var(--sonar); color: var(--abyss); font-weight: 600; font-size: 18px; text-decoration: none; padding: 16px; border-radius: 12px; }
+  .btn:hover { filter: brightness(1.1); }
+  .btn:focus-visible { outline: 3px solid var(--foam); outline-offset: 3px; }
+  .size { font: 500 13px "IBM Plex Mono", monospace; color: var(--mist); }
+  ol { margin: 0; padding-left: 22px; color: var(--mist); }
+  li { margin: 4px 0; }
+  code { font: 500 14px "IBM Plex Mono", monospace; color: var(--foam); background: var(--deck); padding: 2px 6px; border-radius: 6px; }
+  a { color: var(--foam); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icono.png" alt="">
+    <div>
+      <h1>Hundir la Flota</h1>
+      <p class="tag">Batalla naval en 3D para Windows.</p>
+    </div>
+  </header>
+
+  <div class="card">
+    <h2>Descargar · versión 1.0.0</h2>
+    <a class="btn" href="HundirLaFlota-1.0.0-windows.zip" download>Descargar para Windows</a>
+    <span class="size">37 MB · Windows 10 u 11, 64 bits</span>
+    <ol>
+      <li>Descomprime el ZIP y abre <code>HundirLaFlota.exe</code>.</li>
+      <li>Si aparece «Windows protegió tu PC», pulsa «Más información» → «Ejecutar de todas formas» (sale porque el juego no lleva firma digital de pago).</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Jugar online con otra persona</h2>
+    <ol>
+      <li>Uno entra en «Online» → «Crear sala privada» y pasa el código de 6 letras.</li>
+      <li>El otro entra en «Online», escribe el código en «Unirse a una sala» y pulsa «Unirse».</li>
+    </ol>
+    <p>La primera conexión puede tardar hasta un minuto si nadie ha jugado en un rato.</p>
+  </div>
+
+  <p class="size" style="margin-top:28px">Huella SHA-256 del archivo: <a href="SHA256SUMS.txt">SHA256SUMS.txt</a></p>
+</main>
+</body>
+</html>
