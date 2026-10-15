@@ -1,0 +1,23 @@
+# Mantiene despierto el servidor online gratuito (Render lo duerme tras 15 min sin tráfico
+# y despertarlo tarda ~50 s). Da un toque cada 10 minutos con un saludo WebSocket.
+name: Despertador del servidor
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  toque:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Saludo al servidor
+        run: |
+          code=$(curl -s -o /dev/null -m 90 -w "%{http_code}" \
+            -H "Connection: Upgrade" -H "Upgrade: websocket" \
+            -H "Sec-WebSocket-Version: 13" -H "Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==" \
+            https://hundirlaflota-servidor.onrender.com/ || true)
+          echo "Respuesta del servidor: $code"
