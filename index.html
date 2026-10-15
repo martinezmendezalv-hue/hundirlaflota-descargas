@@ -6,9 +6,14 @@
 <title>Hundir la Flota · Descargar</title>
 <meta name="description" content="Batalla naval en 3D para Windows: contra la máquina, a 2 jugadores y online.">
 <link rel="icon" href="icono.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Big+Shoulders+Display:wght@800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
 <style>
+  /* Fuentes servidas desde esta misma página (licencia OFL, ver fuentes/): sin peticiones a terceros. */
+  @font-face { font-family: "Barlow"; src: url("fuentes/Barlow-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Barlow"; src: url("fuentes/Barlow-SemiBold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+  @font-face { font-family: "Big Shoulders Display"; src: url("fuentes/BigShouldersDisplay-wght.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
+  @font-face { font-family: "IBM Plex Mono"; src: url("fuentes/IBMPlexMono-Medium.ttf") format("truetype"); font-weight: 500; font-display: swap; }
   :root {
     --abyss: #07131f; --hull: #0f2133; --deck: #18324a; --grid: #2f5373;
     --foam: #e8f1f7; --mist: #8fa9bf; --sonar: #2ec4b6;
@@ -44,8 +49,8 @@
   </header>
 
   <div class="card">
-    <h2>Descargar · versión 1.0.0</h2>
-    <a class="btn" href="HundirLaFlota-1.0.0-windows.zip" download>Descargar para Windows</a>
+    <h2>Descargar · versión 1.0.1</h2>
+    <a class="btn" href="HundirLaFlota-1.0.1-windows.zip" download rel="noopener">Descargar para Windows</a>
     <span class="size">37 MB · Windows 10 u 11, 64 bits</span>
     <ol>
       <li>Descomprime el ZIP y abre <code>HundirLaFlota.exe</code>.</li>
